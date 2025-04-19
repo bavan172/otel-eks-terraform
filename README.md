@@ -1,5 +1,3 @@
-# otel-eks-terraform
-
 # OpenTelemetry on EKS (Terraform)
 
 ## Overview
@@ -14,3 +12,29 @@ A Terraform project that automatically provisions an AWS EKS cluster and deploys
 | Alerting          | AWS SNS               | Email notifications              |
 | CI/CD             | GitHub Actions        | Automated deployments           |
 
+<<<<<<< HEAD
+=======
+## Architecture
+
+graph TD
+    A[Terraform] --> B[AWS Infrastructure]
+    B --> C[EKS Cluster]
+    B --> D[VPC Network]
+    B --> E[IAM Roles]
+    C --> F[Worker Nodes]
+    C --> G[OpenTelemetry Demo]
+    G --> H[Frontend Service]
+    G --> I[Backend Services]
+    G --> J[Observability Stack]
+    J --> K[Prometheus]
+    J --> L[Grafana]
+    J --> M[Jaeger]
+    K --> N[AWS SNS Alerts]
+
+
+    flowchart LR
+    App-->|Traces|Jaeger
+    App-->|Metrics|Prometheus
+    Prometheus-->Grafana
+    Prometheus-->|Alerts|SNS-->Email
+>>>>>>> 6eec80765be1fd2604d479424c69514d90ac1074
