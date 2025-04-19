@@ -1,5 +1,3 @@
-# otel-eks-terraform
-
 # OpenTelemetry on EKS (Terraform)
 
 ## Overview
